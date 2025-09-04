@@ -42,6 +42,8 @@
     --title-size: 2rem;
     --icon-color: #FF6565;
     --pentagon-color: #F8796C;
+    --pentagon-size: 180px;
+    --pentagon-gap: 5rem;
     --results-bg: #212529;
 }
 
@@ -606,51 +608,26 @@ li a {
 .our-results-pentagons {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+    gap: var(--pentagon-gap);
     max-width: 800px;
     margin: 0 auto;
 }
 
-.pentagon-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .pentagon-shape {
-    width: 140px;
-    height: 140px;
+    width: var(--pentagon-size);
+    height: var(--pentagon-size);
     background: url('./images/Polygon Copy.png') center/contain no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.pentagon-content {
-    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: white;
+    flex-shrink: 0;
 }
 
-.pentagon-percentage {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 0.3rem;
-    line-height: 1.2;
-}
-
-.pentagon-text {
-    font-size: 0.8rem;
-    font-weight: 400;
-    line-height: 1.1;
-    max-width: 100px;
-    text-align: center;
-}
+.pentagon-percentage { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.3rem; }
+.pentagon-text { font-size: 0.8rem; max-width: 100px; white-space: nowrap; }
 
 /* Responsive for tablet */
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -689,20 +666,9 @@ li a {
     .our-results-pentagons {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         gap: 2rem;
-        justify-items: center;
-        align-items: center;
         max-width: 600px;
         margin: 0 auto;
-    }
-    
-    .pentagon-block {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
     }
     
     .pentagon-shape {
@@ -758,18 +724,8 @@ li a {
     }
     
     .our-results-pentagons {
-        display: flex;
         flex-direction: column;
         gap: 2rem;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .pentagon-block {
-        flex: none;
-        min-width: auto;
-        margin: 0;
-        width: auto;
     }
     
     .pentagon-shape {
